@@ -6,8 +6,15 @@ contributes:
   formats:
     revealjs:
       theme: [default, clean.scss]
-      menu:
-        side: left
-      slide-number: true
+      controls: false
+      progress: false
+      incremental: true
+      slide-number: "c"
+      menu: false
       date-format: long
-
+      preview-links: auto
+      transition: "none"
+      background-transition: "none"
+      transition-speed: "default"
+      chalkboard:
+        buttons: false
