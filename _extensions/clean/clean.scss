@@ -3,7 +3,7 @@
 // Custom colours and variables
 
 $jet: #131516;
-$accent: #107895;
+$accent: #00509d;
 $accent2: #9a2515;
 // $accent2: #e64173;
 $right-arrow: "\2192"; // Unicode character for right arrow
@@ -24,9 +24,15 @@ Note: This theme uses the Roboto font family, which it imports from Google
   preserving consistent font weights, you may also wish to remove "Roboto"
   from the choice set if the family is installed locally.
 */
-@import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
-$font-family-sans-serif: "Roboto", sans-serif !default;
-$presentation-heading-font: "Roboto", sans-serif !default;
+
+// @import url(https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,350,350i,400,400i);
+// $font-family-sans-serif: "Roboto", sans-serif !default;
+// $presentation-heading-font: "Roboto", sans-serif !default;
+
+// Use noto sans font instead of roboto
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap');
+$font-family-sans-serif: "Noto Sans", sans-serif !default;
+$presentation-heading-font: "Noto Sans", sans-serif !default;
 
 $presentation-heading-color: $jet !default;
 $presentation-heading-font-weight: lighter;
@@ -61,13 +67,15 @@ $selection-bg: #26351c !default;
   .title {
     color: $body-color;
     font-size: 1.4em;
-    font-weight: 350;
+    font-weight: 700;
+    padding-right: 5em;
     // font-weight: lighter;
   }
 
   .subtitle {
-    color: $accent;
-    font-style: italic;
+    // color: $accent;
+    // font-style: italic;
+    font-style: normal;
     margin-top: 0em;
     font-weight: lighter;
   }
@@ -75,13 +83,15 @@ $selection-bg: #26351c !default;
   .institute,
   .quarto-title-affiliation,
   .quarto-title-author-email {
-    font-style: italic;
-    // font-size: 80%;
-    // color: #7F7F7F;
+    font-style: normal;
+    font-size: 60%;
+    color: $accent;
   }
 
   .author,
   .quarto-title-author-name {
+    margin-top: 0.8em;
+    font-size: 0.8em;
     color: $body-color;
   }
 
@@ -95,13 +105,35 @@ $selection-bg: #26351c !default;
       width: 100%;
     }
   }
+  .date {
+    font-size: 0.8em;
+    color: $body-color;
+    margin-bottom: 0em;
+  }
+
+  // uncomment to add a horizontal rule below the title slide
+  // p.author::before,
+  // div.quarto-title-author::before {
+  //   content: "";
+  //   display: block;
+  //   border: none;
+  //   background-color: $body-color;
+  //   color: $body-color;
+  //   height: 1px;
+  //   margin-bottom: 2em;
+  // }
 
 }
 
+.reveal h1 {
+  // font-weight: 350;
+  font-weight: normal;
+  font-size: 10em;
+}
 
 .reveal h2 {
   // font-weight: 350;
-  font-weight: lighter;
+  font-weight: normal;
   font-size: 1.4em;
 }
 
@@ -109,7 +141,7 @@ $selection-bg: #26351c !default;
   color: $accent;
   font-style: italic;
   // font-weight: 350;
-  font-weight: lighter;
+  font-weight: medium;
   font-size: 0.95em;
 }
 
@@ -258,4 +290,17 @@ $selection-bg: #26351c !default;
   width: auto;
   height: auto;
   object-fit: contain;
+}
+
+// This can be used to add extra padding
+.extrapad li:not(:last-child) {
+    margin-bottom:60px  !important;
+}
+
+// This can be used to vertically center content across collumns
+.v-center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
 }
