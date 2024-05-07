@@ -1,8 +1,16 @@
 ---
-title: A title
-subtitle: A subtitle
+title: A title that is super cool and still descriptive
+subtitle: A subtitle that is equally fancy
 format: clean-revealjs
 author:
+  - name: Your Name
+    orcid: 0000-0000-0000-0000
+    email: alias@email.com
+    affiliations: Your Institution
+  - name: Your Name
+    orcid: 0000-0000-0000-0000
+    email: alias@email.com
+    affiliations: Your Institution
   - name: Your Name
     orcid: 0000-0000-0000-0000
     email: alias@email.com
